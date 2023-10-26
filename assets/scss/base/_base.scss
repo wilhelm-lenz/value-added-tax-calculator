@@ -1,0 +1,264 @@
+/* =================================== */
+/* DESIGN SYSTEM */
+/* =================================== */
+/*
+
+! --- 01 TYPOGRAPHY SYSTEM
+
+* Font size system(px)
+10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
+
+* Font weights
+Default: 400
+
+* Line heights
+Default: 1
+
+! --- 02 COLORS
+
+- Primary: Primäre Farbe 
+- Tints (Farbtöne):
+- Shades (Schattierungen):
+- Accents:
+- Greys: #555 Beliebte Grau Töne
+
+! --- 05 SHADOWS
+
+! --- 06 BORDER-RADIUS
+
+! --- 07 WHITESPACE
+
+* Spacing System (px)
+2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
+
+*/
+
+/* =================================== */
+/* FONTS */
+/* =================================== */
+
+@font-face {
+  font-family: "";
+  src: url();
+}
+
+/* =================================== */
+/* RESET STYLES */
+/* =================================== */
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+}
+
+/* ------------------------ */
+/* HELPER CLASSES */
+/* ------------------------ */
+
+.container {
+  max-width: 1440px;
+  margin: 0 auto;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ------------------------ */
+/* GENERAL STYLES */
+/* ------------------------ */
+
+html {
+  /* 10px / 16px * 100% = 62,5% */
+  /* Percentage of users browser font-size setting */
+  font-size: 62.5%;
+}
+
+body {
+  font-family: sans-serif;
+  line-height: 1;
+  font-weight: 400;
+  height: 100vh;
+  background: linear-gradient(
+    135deg,
+    rgba(34, 77, 230, 1) 50%,
+    rgba(206, 212, 218, 1) 50%
+  );
+}
+
+/* ------------------------ */
+/* COMPONENT STYLES */
+/* ------------------------ */
+
+/* ------ MAIN ------ */
+
+.headline {
+  font-size: 3rem;
+  margin-bottom: 20px;
+  color: #ffffff;
+}
+
+.form {
+  // background-color: rgba(200, 200, 200, 0.8);
+  padding: 1rem;
+  border-radius: 16px;
+  border: 1px solid #ced4da;
+  width: 500px;
+  background-color: #ffffff90;
+}
+
+.vat-add-deduct {
+  background-color: #ced4da;
+  padding: 16px;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+.vat-add-deduct label {
+  font-size: 2rem;
+  font-weight: bold;
+  display: inline-block;
+  margin-bottom: 10px;
+  color: #224de6;
+}
+
+.vat-add-deduct input {
+  margin-bottom: 8px;
+}
+
+.vat-add-deduct div span {
+  font-size: 1.6rem;
+}
+
+.vat-rate {
+  background-color: #ced4da;
+  padding: 16px;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+.vat-rate label {
+  font-size: 2rem;
+  font-weight: bold;
+  display: inline-block;
+  margin-bottom: 10px;
+  color: #224de6;
+}
+
+.vat-rate input {
+  margin-bottom: 8px;
+}
+
+.vat-rate div span {
+  font-size: 1.6rem;
+}
+
+.net-gross-amount-input {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  background-color: #ced4da;
+  padding: 16px 16px 32px;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+.net-gross-amount-input-headline {
+  font-size: 1.6rem;
+  margin-bottom: 10px;
+}
+
+.net-gross-amount-input-headline span {
+  color: #e03131;
+  font-size: 20px;
+}
+
+.net-gross-amount-input input {
+  border-radius: 8px;
+  padding: 5px;
+  max-width: 12rem;
+  min-width: 10rem;
+  border: 2px solid #228be6;
+}
+
+.btn-calculate-wrapper {
+  position: relative;
+}
+
+.btn-calculate {
+  width: 100%;
+  padding-block: 10px;
+  font-size: 2rem;
+  margin-bottom: 20px;
+  background-color: #228be6;
+  color: white;
+  border: none;
+  border-radius: 8px;
+}
+
+.btn-calculate:hover {
+  background-color: #4dabf7;
+}
+
+.divider {
+  display: block;
+  padding-block: 1px;
+  background-color: #224de6;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+}
+
+.subheadline {
+  font-size: 1.6rem;
+  font-weight: bold;
+  margin-block: 20px;
+  color: #224de6;
+}
+
+.net-amount-output-wrapper {
+  background-color: #ced4da;
+  border-radius: 8px;
+  margin-bottom: 10px;
+  padding: 16px 16px 32px;
+}
+
+.net-amount-output-wrapper p {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #224de6;
+}
+
+.net-amount-output {
+  font-size: 1.6rem;
+  margin-top: 10px;
+  display: inline-block;
+}
+
+.net-gross-amount-output-wrapper {
+  background-color: #ced4da;
+  padding: 16px 16px 32px;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+.net-gross-amount-output-wrapper p {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #224de6;
+}
+
+.net-gross-amount-output-headline {
+}
+
+.net-gross-amount-output {
+  font-size: 1.6rem;
+  margin-top: 10px;
+  display: inline-block;
+}
