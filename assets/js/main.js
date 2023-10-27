@@ -2,7 +2,8 @@
 
 const vatAdd = document.querySelector("#vat-add");
 const vatDeduct = document.querySelector("#vat-deduct");
-const vatRate = document.querySelectorAll("#vat-rate");
+const vatRateNineteen = document.querySelector("#vat-rate-nineteen");
+const vatRateSeven = document.querySelector("#vat-rate-seven");
 const netGrossAmountInput = document.querySelector("#net-gross-amount-input");
 const netGrossAmountOutput = document.querySelector(".net-gross-amount-output");
 const netGrossAmountOutputHeadline = document.querySelector(
@@ -14,13 +15,15 @@ const netGrossAmountInputHeadline = document.querySelector(
 const btnCalculate = document.querySelector(".btn-calculate");
 const netAmountOutput = document.querySelector(".net-amount-output");
 
+console.log(vatRateNineteen);
+console.log(vatRateSeven);
 const vatAddCalculate = () => {
-  if (Number(vatRate[0].checked)) {
+  if (vatRateNineteen.checked) {
     netAmountOutput.textContent =
       (Number(netGrossAmountInput.value) * 0.19).toFixed(2) + " €";
     netGrossAmountOutput.textContent =
       (Number(netGrossAmountInput.value) * 1.19).toFixed(2) + " €";
-  } else if (Number(vatRate[1].checked)) {
+  } else if (vatRateSeven.checked) {
     netAmountOutput.textContent =
       (Number(netGrossAmountInput.value) * 0.07).toFixed(2) + " €";
     netGrossAmountOutput.textContent =
@@ -29,12 +32,12 @@ const vatAddCalculate = () => {
 };
 
 const vatDaductCalculate = () => {
-  if (Number(vatRate[0].checked)) {
+  if (vatRateNineteen.checked) {
     netAmountOutput.textContent =
       ((Number(netGrossAmountInput.value) / 1.19) * 0.19).toFixed(2) + " €";
     netGrossAmountOutput.textContent =
       (Number(netGrossAmountInput.value) / 1.19).toFixed(2) + " €";
-  } else if (Number(vatRate[1].checked)) {
+  } else if (vatRateSeven.checked) {
     netAmountOutput.textContent =
       ((Number(netGrossAmountInput.value) / 1.07) * 0.07).toFixed(2) + " €";
     netGrossAmountOutput.textContent =

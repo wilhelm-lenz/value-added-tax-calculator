@@ -9,51 +9,51 @@
 </head>
 
 <body>
-
-  <main class="container">
-    <h1 class="headline">Mehrwertsteuer-Rechner</h1>
-    <form class="form">
-      <article class="vat-add-deduct">
-        <label for="vat-add-deduct">Was soll berechnet werden?</label>
-        <div>
-          <input type="radio" name="vat-add-deduct" id="vat-add" checked> <span>Mehrwertsteuer aufschlagen (Netto zu
-            Brutto)</span>
+  <main>
+    <div class="container">
+      <h1 class="headline">Mehrwertsteuer-Rechner</h1>
+      <form class="form">
+        <article class="vat-add-deduct">
+          <label for="vat-add">Was soll berechnet werden?</label>
+          <div>
+            <input type="radio" name="vat-add-deduct" id="vat-add" checked> <span>Mehrwertsteuer aufschlagen (Netto zu
+              Brutto)</span>
+          </div>
+          <div>
+            <input type="radio" name="vat-add-deduct" id="vat-deduct"> <span>Mehrwertsteuer abziehen (Brutto zu
+              Netto)</span>
+          </div>
+        </article>
+        <article class="vat-rate">
+          <label for="vat-rate-nineteen">Mehrwertsteuersatz</label>
+          <div>
+            <input type="radio" name="vat-rate" id="vat-rate-nineteen" checked value="19"> <span>19%</span>
+          </div>
+          <div>
+            <input type="radio" name="vat-rate" id="vat-rate-seven" value="7"> <span>7%</span>
+          </div>
+        </article>
+        <article class="net-gross-amount-input">
+          <label for="net-gross-amount-input" class="net-gross-amount-input-headline">Nettobetrag (Preis ohne
+            Mehrwertsteuer) in Euro<span>*</span></label>
+          <input type="number" name="net-gross-amount-input" id="net-gross-amount-input">
+        </article>
+        <div class="btn-calculate-wrapper">
+          <input type="button" value="Berechnen" class="btn-calculate">
+          <span class="divider"></span>
         </div>
-        <div>
-          <input type="radio" name="vat-add-deduct" id="vat-deduct"> <span>Mehrwertsteuer abziehen (Brutto zu
-            Netto)</span>
-        </div>
-      </article>
-      <article class="vat-rate">
-        <label for="vat-rate">Mehrwertsteuersatz</label>
-        <div>
-          <input type="radio" name="vat-rate" id="vat-rate" checked value="19"> <span>19%</span>
-        </div>
-        <div>
-          <input type="radio" name="vat-rate" id="vat-rate" value="7"> <span>7%</span>
-        </div>
-      </article>
-      <article class="net-gross-amount-input">
-        <label for="net-gross-amount-input" class="net-gross-amount-input-headline">Nettobetrag (Preis ohne
-          Mehrwertsteuer) in Euro<span>*</span></label>
-        <input type="number" name="net-gross-amount-input" id="net-gross-amount-input">
-      </article>
-      <div class="btn-calculate-wrapper">
-        <input type="button" value="Berechnen" class="btn-calculate">
-        <span class="divider"></span>
-      </div>
-      <h2 class="subheadline">Ergebnis</h2>
-      <article class="net-amount-output-wrapper">
-        <p>Mehrwertsteuerbetrag</p>
-        <span class="net-amount-output">€</span>
-      </article>
-      <article class="net-gross-amount-output-wrapper">
-        <p class="net-gross-amount-output-headline">Bruttobetrag (Endpreis)</p>
-        <span class="net-gross-amount-output">€</span>
-      </article>
-    </form>
+        <h2 class="subheadline">Ergebnis</h2>
+        <article class="net-amount-output-wrapper">
+          <p>Mehrwertsteuerbetrag</p>
+          <span class="net-amount-output">€</span>
+        </article>
+        <article class="net-gross-amount-output-wrapper">
+          <p class="net-gross-amount-output-headline">Bruttobetrag (Endpreis)</p>
+          <span class="net-gross-amount-output">€</span>
+        </article>
+      </form>
+    </div>
   </main>
-
 
   <script src="./assets/js/main.js"></script>
 </body>
